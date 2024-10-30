@@ -1,0 +1,43 @@
+/* Custom styles */
+.scale-105 {
+  transform: scale(1.05);
+}
+
+@keyframes spin {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Transitions */
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Focus styles */
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(16, 121, 178, 0.2);
+}
+
+/* Button states */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Error message animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#errorMessage:not(.hidden) {
+  animation: fadeIn 0.3s ease-in-out;
+}
