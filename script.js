@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function translateText(text, targetLanguage) {
       // Replace 'your-api-key' with your actual API key when deploying
-      const API_KEY = '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';
+      const API_KEY = process.env.API_KEY;
       
       const response = await fetch('https://api.openai.com/v1/completions', {
           method: 'POST',
